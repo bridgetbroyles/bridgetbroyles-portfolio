@@ -2,6 +2,7 @@ public class largerDigits {
 
 	public static void main(String[] args) {
 		System.out.print(largerDigits(8921, 97325));
+		// returns 98925
 	}
 
 	public static int largerDigits(int a, int b) {
