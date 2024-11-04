@@ -17,8 +17,8 @@ public class matrixpractice {
 				return false;
 		}
 		// Below top left to bottom right diagonal
-		for (int i = 0; i < arr.length; i++) {
-			for (int j = 0; j <= i; j++) {
+		for (int i = 1; i < arr.length; i++) {
+			for (int j = 0; j < i; j++) {
 				if (arr[i][j] != 0)
 					return false;
 			}
