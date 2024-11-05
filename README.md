@@ -11,5 +11,5 @@ User interface design,
 Data structures and algorithms, 
 Web applications, 
 
-This portfolio is largely a work in progress, and I have yet to transfer my work from other application. However, feel free to browse through any of my projects. Thank you for visiting!
+This portfolio is largely a work in progress, and I have yet to transfer my work from other applications. However, feel free to browse through any of my projects. Thank you for visiting!
 
