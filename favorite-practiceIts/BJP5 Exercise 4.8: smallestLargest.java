@@ -1,5 +1,7 @@
 /* 
-Write a method named smallestLargest that asks the user to enter numbers, then prints the smallest and largest of all the numbers typed in by the user. You may assume the user enters a valid number greater than 0 for the number of numbers to read. Here is an example dialogue:
+Write a method named smallestLargest that asks the user to enter numbers, then prints the smallest a
+nd largest of all the numbers typed in by the user. You may assume the user enters a valid number greater 
+than 0 for the number of numbers to read. Here is an example dialogue:
 
 How many numbers do you want to enter? 4
 Number 1: 5
