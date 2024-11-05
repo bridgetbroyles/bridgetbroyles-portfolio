@@ -80,7 +80,6 @@ public class ReverseHangman {
         for (int i = 0; i < word.length(); i++) {
             boolean found = false;
             for (String pos : positions) {
-                // Avoiding parseInt by converting char to int and comparing
                 if (i == (pos.charAt(0) - '1')) {
                     newWord += letter;
                     found = true;
