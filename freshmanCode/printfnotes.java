@@ -22,8 +22,10 @@ public class printfnotes {
 		}
 
 		/*
-		 * Output: 1 2 3 4 5 6 7 8 9 10 2 4 6 8 10 12 14 16 18 20 3 6 9 12 15 18 21 24
-		 * 27 30
+		 * Output: 
+   		 *    1   2   3   4   5   6   7   8   9  10
+   		 *    2   4   6   8  10  12  14  16  18  20
+		 *    3   6   9  12  15  18  21  24  27  30
 		 */
 
 		double pi = 3.141592653589793;
@@ -31,14 +33,16 @@ public class printfnotes {
 		System.out.printf("more precisely, %8.3f\n", pi);
 
 		/*
-		 * Output: pi is 3.1 more precisely, 3.142
+		 * Output: pi is 3.1 
+   		 * more precisely,   3.142
 		 */
 
 		System.out.printf("%d\n", 10000);
 		System.out.printf("%,d\n", 10000);
 
 		/*
-		 * Output: 10000 10,000
+		 * Output: 10000 
+   		 * 10,000
 		 */
 	}
 }
