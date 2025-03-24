@@ -143,30 +143,25 @@ public static double highestSimilarity(Map<String, Set<String>> books) {
 public static TreeMap<String, ArrayList<Integer>> getIndex(String[][] book, String[] keyWords) {
     TreeMap<String, ArrayList<Integer>> index = new TreeMap<>();
 
-    // We know all elements of keyWords are present in book, so add them all up front.
+    // We know all elements of keyWords are present in book, so add them upfront
     for (String word : keyWords) {
         index.put(word, new ArrayList<>());
     }
 
-    // Loop through each page of the book
-    for (int i = 0; i < book.length; i++) {
-        int pageNum = i + 1;
-
-        // Loop through each word on the current page
-        for (String word : book[i]) {
-            // If the word is in the index, add the page number
+    int pageNum = 1;
+    for (String[] page : book) {
+        for (String word : page) {
             if (index.containsKey(word)) {
                 ArrayList<Integer> pageNums = index.get(word);
-
-                // Make sure we have not already added this page
-                if (pageNums.size() == 0 || pageNums.get(pageNums.size() - 1) != pageNum) {
-                    pageNums.add(pageNum); // Add the page number
-                    // No need to put it back in the map as pageNums is a reference
+                // Check if the page number is already in the list
+                if (!pageNums.contains(pageNum)) {
+                    pageNums.add(pageNum);
                 }
             }
         }
+        pageNum++;
     }
-
+    
     return index;
 }
 
