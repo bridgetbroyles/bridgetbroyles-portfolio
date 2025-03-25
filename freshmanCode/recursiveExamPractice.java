@@ -2,9 +2,9 @@
 // Problem: Recursively check if there is a path between two airlines by exploring their partners.
 private static boolean helper(Airline org, Airline dest, Set<Airline> visited) {
     if (org.equals(dest)) {
-        return true; // Found a path.
+        return true; 
     } else if (visited.contains(org)) {
-        return false; // Already visited, avoid cycles.
+        return false; 
     }
 
     // Mark the current airline as visited.
@@ -25,21 +25,15 @@ private static boolean helper(Airline org, Airline dest, Set<Airline> visited) {
 // If a mine is revealed, the game ends. If a cell with zero adjacent mines is revealed, 
 // its neighboring cells are recursively revealed.
 public void update(int row, int col) {
-    // Thinking ahead row and col may be out of bounds
-    // nothing to do in that case. Likewise, if this
-    // cell is already revealed nothing to do.
-    // So, make sure inbounds and not already revealed.
     if (0 <= row && row < numMines.length
         && 0 <= col && col < numMines[0].length
         && !revealed[row][col]) {
         
-        // reveal it
         revealed[row][col] = true;
 
         if (numMines[row][col] == MINE) {
-            gameOver = true; // Corrected `==` to `=`, since it's an assignment.
+            gameOver = true; 
         } else if (numMines[row][col] == 0) {
-            // Oh my, need to reveal my neighbors.
             for (int r = row - 1; r <= row + 1; r++) {
                 for (int c = col - 1; c <= col + 1; c++) {
                     update(r, c); // update handles out of bounds or already revealed.
@@ -53,7 +47,7 @@ public void update(int row, int col) {
 // considering elevation differences between adjacent cells.
 public static int minSteps(int[][] area, int row, int col) {
     if (row == 0 || col == 0 || row == area.length - 1 || col == area[0].length - 1) {
-        return 0; // We are here!
+        return 0; 
     }
     int min = Integer.MAX_VALUE / 2;
     int thisElevation = area[row][col];
