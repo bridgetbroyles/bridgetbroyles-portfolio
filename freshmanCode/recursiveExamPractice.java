@@ -92,7 +92,7 @@ public static boolean knightCanReach(int rows, Position knight, Position target,
 
             // Recursively check if the knight can reach the target from the new position
             if (knightCanReach(rows, newPos, target, numMoves)) {
-                return true; // Pop, pop, pop!!!
+                return true; 
             }
         }
     }
