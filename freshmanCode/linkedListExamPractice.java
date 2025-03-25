@@ -4,7 +4,6 @@ private boolean isRectangular() {
     if (firstRow == null) {
         return true; // An empty structure is considered rectangular
     }
-
     int targetColumns = numColumns(firstRow);
     RowHeader<E> temp = firstRow.nextRow;
 
@@ -12,32 +11,30 @@ private boolean isRectangular() {
     while (temp != null) {
         int columns = numColumns(temp);
         if (columns != targetColumns) {
-            return false; // Found a row with a different number of columns
+            return false; 
         }
         temp = temp.nextRow;
     }
 
-    return true; // All rows have the same number of columns
+    return true; 
 }
 
 // Counts the number of columns (nodes) in a row.
 private int numColumns(RowHeader<E> header) {
     int count = 0;
     DataNode<E> temp = header.first;
-
-    // Count the number of nodes (columns) in the current row
+    
     while (temp != null) {
         count++;
         temp = temp.next;
     }
 
-    return count; // Return the number of columns in the row
+    return count; 
 }
 
 // 2023 Fall
 // Finds the longest consecutive run of the target element in the list.
 public int longestRun(E tgt) {
-    // Single loop approach
     int maxRun = 0;
     int currentRun = 0;
     Node<E> temp = first;
@@ -90,7 +87,7 @@ public boolean removeLast(E tgt) {
             first = null; // Set first to null if the only element is tgt
             return true;
         } else {
-            return false; // Target not found
+            return false; 
         }
     }
 
@@ -107,7 +104,7 @@ public boolean removeLast(E tgt) {
         temp.next = null; // Remove last node
         return true;
     } else {
-        return false; // Target not found in last node
+        return false; 
     }
 }
 
@@ -199,11 +196,11 @@ public boolean listsConverge(LinkedList314<E> other) {
     // Traverse both lists until convergence or end
     while (tempBig != null) {
         if (tempBig == tempSmall) {
-            return true; // Same node! Lists converge.
+            return true; 
         }
         tempBig = tempBig.next;
         tempSmall = tempSmall.next;
     }
 
-    return false; // No convergence found
+    return false; 
 }
