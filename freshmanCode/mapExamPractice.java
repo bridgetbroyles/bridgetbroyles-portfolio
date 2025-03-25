@@ -87,7 +87,7 @@ public static int updateAuthors(Map<String, List<String>> map, String[] authors)
             if (!author.equals(otherAuthor)) {
                 collabs.add(0, otherAuthor); // Add other authors to the front
             }
-        } // collabs is a reference, so no need to put back in map
+        } /
     }
 
     // Now do the second part: count collaborations between first and last author
